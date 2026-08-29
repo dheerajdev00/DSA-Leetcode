@@ -20,9 +20,9 @@ public:
             Adj[it[0]].push_back(it[1]); 
         }
         vector<int>vis(V,0);
-        for(int i=0; i<V; i++){
+        for(int i=1; i<=V; i++){
             if(!vis[i]){
-               if(dfs(1,-1,vis,adj)) return true;
+               if(dfs(i,-1,vis,adj)) return true;
             }
         }
         return false;
