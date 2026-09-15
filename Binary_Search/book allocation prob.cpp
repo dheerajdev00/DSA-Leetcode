@@ -21,7 +21,7 @@ public:
         int n = nums.size();
         if(m>n) return -1;
         
-        int low = *max(nums.begin(), nums.end());
+        int low = *max_element(nums.begin(), nums.end());
         int high = accumulate(nums.begin(),nums.end(),0);
         while(low<=high){
             int mid = low+(high-low)/2;
